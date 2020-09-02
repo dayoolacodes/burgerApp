@@ -11,9 +11,9 @@ const Burger = (props) => {
     );
     }).reduce((arr, el) => {
     return arr.concat(el)
-    });
+    }, []);
     if(transformedIngredients.length < 1){
-        transformedIngredients = <p style={{color: "#cece"}}>Pls Add Ingredients</p>
+        transformedIngredients = <p style={{color: "#cecece"}}>Pls Add Ingredients</p>
     }
 console.log(transformedIngredients);
 
