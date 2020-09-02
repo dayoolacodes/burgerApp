@@ -27,12 +27,14 @@
     background-color: #AC9980;
     color: #ccc;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
 .Label {
     padding: 10px;
     font-weight: bold;
-    width: 80px;
+    width: 120px;
+    color: white;
     
 }
 .Label:hover {
@@ -62,3 +64,4 @@
     color: white;
     box-shadow: 5px 2px 2px #46331c;
 }
+
