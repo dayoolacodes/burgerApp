@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import Aux from "../../hoc/Auxil"
 import Burger from '../../components/Burger/Burger'
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
+import Modal from '../../components/UI/Modal/Modal'
+import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
 
 const INGREDIENTS_PRICES={
     salad: 150,
@@ -19,7 +21,8 @@ class BurgerBuilder extends Component{
             meat : 0,
         },
         totalPrice : 200,
-        purchasable: false
+        purchasable: false, 
+        showModal: false,
     }
 
     UpdatedPurchase=(ingredients)=>{
@@ -54,6 +57,15 @@ class BurgerBuilder extends Component{
             this.UpdatedPurchase(newIngredientState)
         }
 
+        toggleOrder = () =>{
+            this.setState({showModal:true})
+        }
+
+        closeModalHandler =() =>{
+            this.setState({showModal:false})
+            // console.log("clicked close modal")
+        }
+
     render(){
         let disabledInfo ={
             ...this.state.ingredients
@@ -62,17 +74,22 @@ class BurgerBuilder extends Component{
             disabledInfo[key] = disabledInfo[key] <= 0 
         }
         
+        
         return(
             <Aux>
                 <div> 
                 <Burger ingredients={this.state.ingredients} />
                 </div>
                 {"Base Price: ₦"+ 200}
+                <Modal show={this.state.showModal} close={this.closeModalHandler}>
+                <OrderSummary ingredients={this.state.ingredients}/>
+                </Modal>
                <BuildControls addIngredients={this.addIngredients} 
                removeIngredients={this.removeIngredients}
                disabledInfo={disabledInfo} 
                currentPrice= {this.state.totalPrice}
                purchasable = {this.state.purchasable}
+               orderSummary = {this.toggleOrder}
                />
             {/* <div>Helo</div> */}
             </Aux>

@@ -13,13 +13,12 @@
 .OrderButton {
     background-color: #DAD735;
     outline: none;
-    /* cursor: pointer; */
+    cursor: pointer;
     border:  none ; /*1px solid #966909;*/
     color: #966909;
     font-family: inherit;
     font-size: 1.2em;
     padding: 15px 30px;
-    
     border-radius: 20px;
 }
 
