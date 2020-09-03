@@ -66,6 +66,11 @@ class BurgerBuilder extends Component{
             // console.log("clicked close modal")
         }
 
+        purchaseContinue=()=>{
+            alert("Thank You! Your Burger Order is Processing ");
+            window.location.reload();
+        }
+
     render(){
         let disabledInfo ={
             ...this.state.ingredients
@@ -82,7 +87,9 @@ class BurgerBuilder extends Component{
                 </div>
                 {"Base Price: ₦"+ 200}
                 <Modal show={this.state.showModal} close={this.closeModalHandler}>
-                <OrderSummary ingredients={this.state.ingredients}/>
+                <OrderSummary ingredients={this.state.ingredients} 
+                close={this.closeModalHandler}
+                continue = {this.purchaseContinue} />
                 </Modal>
                <BuildControls addIngredients={this.addIngredients} 
                removeIngredients={this.removeIngredients}
