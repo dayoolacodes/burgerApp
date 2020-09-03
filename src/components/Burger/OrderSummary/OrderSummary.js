@@ -14,7 +14,7 @@ const orderSummary = (props) => {
             <ul>
             {summary}
             <p>Continue to Checkout? </p>
-            
+            <p>Total Price: ₦{props.price}</p>
             <Button btnType={"Success"} clicked={props.continue}>CONTINUE</Button>
             <Button btnType={"Danger"} clicked={props.close}>CANCEL</Button>
             
