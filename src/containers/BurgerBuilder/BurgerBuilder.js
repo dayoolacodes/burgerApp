@@ -85,7 +85,7 @@ class BurgerBuilder extends Component{
                 <div> 
                 <Burger ingredients={this.state.ingredients} />
                 </div>
-                {"Base Price: ₦"+ 200}
+                {/* {"Base Price: ₦"+ 200} */}
                 <Modal show={this.state.showModal} close={this.closeModalHandler}>
                 <OrderSummary ingredients={this.state.ingredients} 
                 close={this.closeModalHandler}

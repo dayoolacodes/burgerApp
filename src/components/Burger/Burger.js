@@ -15,7 +15,7 @@ const Burger = (props) => {
     if(transformedIngredients.length < 1){
         transformedIngredients = <p style={{color: "#cecece"}}>Pls Add Ingredients</p>
     }
-console.log(transformedIngredients);
+// console.log(transformedIngredients);
 
     return ( 
         <div className= {classes.Burger}>

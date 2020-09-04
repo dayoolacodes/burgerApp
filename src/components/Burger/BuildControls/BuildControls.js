@@ -14,7 +14,7 @@ const controls=[
 const buildControls = (props) => {
     return ( 
         <div className={classes.BuildControls}>
-            <p><i>Current Price: ₦{props.currentPrice}</i></p>
+            <p><b style={{color:"white"}}>Current Price: ₦{props.currentPrice}</b></p>
             {controls.map(cntrl => (
             <BuildControl key={cntrl.label} 
             label={cntrl.label} 
