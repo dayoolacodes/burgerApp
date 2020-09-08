@@ -1,9 +1,18 @@
 import React from 'react';
+import classes from './ToggleMenu.module.css'
+
 
 const toggleMenu = (props) => {
     return (
-        <h4 onClick={props.toggler}> Toggle </h4>
+        <div>
+            <div onClick={props.toggler} className={classes.DrawerToggle}> 
+            <div></div>
+            <div></div>
+            <div></div>
+            </div>
+        </div>
      );
 }
+
 
 export default toggleMenu;
