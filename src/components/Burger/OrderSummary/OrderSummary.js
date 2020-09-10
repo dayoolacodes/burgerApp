@@ -4,10 +4,9 @@ import Button from '../../UI/Button/Button'
 
 const orderSummary = (props) => {
     const summary = Object.keys(props.ingredients).map(igKey => 
-        // <li key={igKey}><p style={{textTransform:"capitalize"}}> {igKey + ":" } <span>{props.ingredients[igKey] }</span></p></li>
         <li key={igKey}> <span style={{textTransform:"capitalize"}}> {igKey} </span>: {props.ingredients[igKey]} </li>
         )
-        
+        // console.log("from orderSummary")
     return ( 
         <Aux>
             <h3>Your Order-Summary</h3>

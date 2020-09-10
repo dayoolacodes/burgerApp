@@ -9,7 +9,7 @@ const toolbar = (props) => {
         <header className={classes.Toolbar}>
             <ToggleMenu toggler={props.sideDrawerHandler} />
             {/* <div onClick={props.sideDrawerHandler}> Menu </div> */}
-            <div style={{height: "80%"}}>
+            <div className={classes.Logo}>
             <Logo />
             </div>
             <nav className={classes.DesktopOnly}>
