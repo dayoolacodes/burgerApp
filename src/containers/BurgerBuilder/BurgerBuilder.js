@@ -81,9 +81,12 @@ class BurgerBuilder extends Component{
                 payment: "payment on delivery"
             }
 
-            axios.post("order/", order)
+            axios.post("/order.json", order)
+            // .then(response => console.log(response))
+            // .catch(err => console.log(err))
+
             alert("Thank You! Your Burger Order is Processing ");
-            window.location.reload();
+            // window.location.reload();
 
         }
 
