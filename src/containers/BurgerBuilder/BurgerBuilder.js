@@ -6,6 +6,7 @@ import Modal from '../../components/UI/Modal/Modal'
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
 import Spinner from '../../components/UI/Spinner/Spinner'
 import axios from '../../axios-order'
+import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler'
 
 
 const INGREDIENTS_PRICES={
@@ -89,8 +90,6 @@ class BurgerBuilder extends Component{
             .catch(err => this.setState({loading: false, showModal: false}))
 
             alert("Thank You! Your Burger Order is Processing ");
-            
-
         }
 
     render(){
@@ -131,4 +130,4 @@ class BurgerBuilder extends Component{
     }
 }
 
-export default BurgerBuilder;
+export default withErrorHandler(BurgerBuilder, axios);
