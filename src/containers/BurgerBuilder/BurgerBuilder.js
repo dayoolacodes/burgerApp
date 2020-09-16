@@ -85,11 +85,11 @@ class BurgerBuilder extends Component{
             }
 
             axios.post("/order.json", order)
-            .then(response => this.setState({loading: false}))
-            .catch(err => this.setState({loading: false}))
+            .then(response => this.setState({loading: false, showModal: false}))
+            .catch(err => this.setState({loading: false, showModal: false}))
 
             alert("Thank You! Your Burger Order is Processing ");
-            // window.location.reload();
+            
 
         }
 
