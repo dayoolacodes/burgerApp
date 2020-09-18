@@ -5,11 +5,9 @@ import Layout from "./hoc/Layout/Layout"
 
 function App() {
   const [show, setShow] = useState(true)
-  const [timer, setTimer] = useState(0)
 
   setTimeout(() => {
     setShow(false)
-    setTimer()
   }, 5000 )
 
   return (
