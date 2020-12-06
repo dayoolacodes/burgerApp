@@ -4,7 +4,7 @@ import BuildControl from './BuildControl/BuildControl'
 
 
 const controls=[
-                {label: "Salad-(₦150)", type: "salad"},
+                {label: "salad-(₦150)", type: "salad"},
                 {label: "Bacon-(₦100)", type: "bacon"},
                 {label: "Cheese-(₦50)", type: "cheese"},
                 {label: "Meat-(₦200)", type: "meat"},
